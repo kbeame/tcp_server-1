@@ -1,10 +1,10 @@
 const gulp = require('gulp');
 const eslint = require('gulp-eslint');
 
-var files = ['./lib/**/*.js', 'gulpfile.js', 'server.js', './test/**/*test.js'];
+var files = ['gulpfile.js', 'server.js', './test/**/*test.js'];
 
 gulp.task('lint', () => {
-  return gulp.src('./test/**/*test.js')
+  return gulp.src(files)
   .pipe(eslint({
     'env': [
       'mocha'
